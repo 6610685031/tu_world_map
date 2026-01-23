@@ -17,7 +17,7 @@ interface MapSearchPageProps {
 export function MapSearchPage({
   onNavigate,
 }: MapSearchPageProps) {
-  const [filters, setFilters] = useState<string[]>(["canteen"]);
+  const [filters, setFilters] = useState<string[]>(["Canteen"]);
   const [searchQuery, setSearchQuery] = useState("");
   const [showSearchResults, setShowSearchResults] =
     useState(false);
@@ -58,7 +58,7 @@ export function MapSearchPage({
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             onFocus={() => setShowSearchResults(true)}
-            placeholder="search"
+            placeholder="Search"
             className="text-foreground flex-1 outline-none bg-transparent placeholder:text-foreground/60"
           />
           <Search className="size-5 text-foreground/60" />
@@ -69,7 +69,7 @@ export function MapSearchPage({
           <div className="flex gap-2">
             <button className="bg-white rounded-full shadow-md px-5 py-2 flex items-center gap-2 hover:bg-gray-50 active:scale-95 transition-transform">
               <SlidersHorizontal className="size-4" />
-              <span className="text-sm">add filter</span>
+              <span className="text-sm">Add Filter</span>
             </button>
 
             {filters.map((filter) => (
@@ -103,7 +103,7 @@ export function MapSearchPage({
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="search"
+                placeholder="Search"
                 autoFocus
                 className="text-foreground flex-1 outline-none bg-transparent placeholder:text-foreground/60 text-center"
               />
